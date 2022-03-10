@@ -1,0 +1,121 @@
+<Tag Name="MT100_Inp_RunFdbk" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Runing Feedback Input]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT100_Inp_RunFdbk_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Runing Feedback Input Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT100_Inp_RunFdbk_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Runing Feedback Input Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT100_Inp_XCmdAcq" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TagDescript - XCmd Acq Input]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT100_Inp_XCmdJog" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TagDescript - Cmd Jog Input]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT100_IOFault_Bor" TagType="Base" DataType="FBD_BOOLEAN_OR" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[1,1,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_BOOLEAN_OR">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="MT100_Out_Run" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Output" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Run Output]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT100_Out_Run_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Run Output Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT100_Out_Run_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Run Output Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT100_Xacq_Bnot" TagType="Base" DataType="FBD_BOOLEAN_NOT" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[3,0,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_BOOLEAN_NOT">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>

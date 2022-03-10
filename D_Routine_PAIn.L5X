@@ -1,0 +1,27 @@
+<Routine Name="XT101" Type="FBD">
+<Description>
+<![CDATA[TagDescript]]>
+</Description>
+<FBDContent SheetSize="B - 11 x 17 in" SheetOrientation="Landscape">
+<Sheet Number="1">
+<Description>
+<![CDATA[PS_AIn_Chan]]>
+</Description>
+<IRef ID="0" X="200" Y="260" Operand="XT101_Inp_Raw" HideDesc="false"/>
+<IRef ID="1" X="200" Y="480" Operand="XT101_Inp_Raw_ChanFault" HideDesc="false"/>
+<IRef ID="2" X="200" Y="360" Operand="XT101_Inp_Raw_ModFault" HideDesc="false"/>
+<AddOnInstruction Name="P_AIChan" ID="3" X="400" Y="200" Operand="XT101_Chan" VisiblePins="Inp_Raw Inp_ModFault Inp_ChanFault Val_InpRaw Val SrcQ Sts_PVGood Sts_PVUncertain Sts_PVBad Sts_Err"/>
+<AddOnInstruction Name="P_AIn" ID="4" X="800" Y="220" Operand="XT101" VisiblePins="Inp_PV Inp_PVSrcQ Cfg_HiHiLim Cfg_HiLim Cfg_LoLim Cfg_LoLoLim Val Val_InpPV Sts_Err"/>
+<Wire FromID="0" ToID="3" ToParam="Inp_Raw"/>
+<Wire FromID="1" ToID="3" ToParam="Inp_ChanFault"/>
+<Wire FromID="2" ToID="3" ToParam="Inp_ModFault"/>
+<Wire FromID="3" FromParam="SrcQ" ToID="4" ToParam="Inp_PVSrcQ"/>
+<Wire FromID="3" FromParam="Val" ToID="4" ToParam="Inp_PV"/>
+<TextBox ID="5" X="1380" Y="1000" Width="0">
+<Text>
+<![CDATA[(RA-LIB)PS_AIn_Chan_4_10_00_ROUTINE]]>
+</Text>
+</TextBox>
+</Sheet>
+</FBDContent>
+</Routine>

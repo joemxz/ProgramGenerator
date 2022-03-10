@@ -1,0 +1,119 @@
+<Tag Name="XV100_Inp_ClosedLS" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Closed Feedback Input]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[1]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="XV100_Inp_ClosedLS_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Closed Feedback Input Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="XV100_Inp_ClosedLS_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Closed Feedback Input Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="XV100_Inp_OpenLS" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Opened Feedback Input]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="XV100_Inp_OpenLS_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Opened Feedback Input Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="XV100_Inp_OpenLS_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Opened Feedback Input Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="XV100_IOFault_Bor" TagType="Base" DataType="FBD_BOOLEAN_OR" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[1,1,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_BOOLEAN_OR">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="XV100_Out" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Output" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Open Output]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="XV100_Out_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Open Output Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="XV100_Out_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Open Output Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>

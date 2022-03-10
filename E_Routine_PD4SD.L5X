@@ -1,0 +1,164 @@
+<Routine Name="D4SD100" Type="FBD">
+<Description>
+<![CDATA[TagDescript]]>
+</Description>
+<FBDContent SheetSize="B - 11 x 17 in" SheetOrientation="Landscape">
+<Sheet Number="1">
+<Description>
+<![CDATA[PS_D4SD]]>
+</Description>
+<IRef ID="0" X="880" Y="260" Operand="D4SD100_Inp_FdbkA" HideDesc="false"/>
+<IRef ID="1" X="700" Y="280" Operand="D4SD100_Inp_FdbkB" HideDesc="false"/>
+<IRef ID="2" X="520" Y="300" Operand="D4SD100_Inp_FdbkC" HideDesc="false"/>
+<IRef ID="3" X="360" Y="320" Operand="D4SD100_Inp_FdbkD" HideDesc="false"/>
+<ORef ID="4" X="1290" Y="260" Operand="D4SD100_Out_A" HideDesc="false"/>
+<ORef ID="5" X="1470" Y="280" Operand="D4SD100_Out_B" HideDesc="false"/>
+<ORef ID="6" X="1290" Y="340" Operand="D4SD100_Out_C" HideDesc="false"/>
+<ORef ID="7" X="1470" Y="360" Operand="D4SD100_Out_D" HideDesc="false"/>
+<ICon ID="8" X="920" Y="540" Name="IOFault"/>
+<ICon ID="9" X="920" Y="500" Name="IntlkOK"/>
+<ICon ID="10" X="760" Y="520" Name="NBIntlkOK"/>
+<ICon ID="11" X="760" Y="360" Name="NBPermOK0"/>
+<ICon ID="12" X="760" Y="400" Name="NBPermOK1"/>
+<ICon ID="13" X="760" Y="440" Name="NBPermOK2"/>
+<ICon ID="14" X="760" Y="480" Name="NBPermOK3"/>
+<ICon ID="15" X="920" Y="340" Name="PermOK0"/>
+<ICon ID="16" X="920" Y="380" Name="PermOK1"/>
+<ICon ID="17" X="920" Y="420" Name="PermOK2"/>
+<ICon ID="18" X="920" Y="460" Name="PermOK3"/>
+<OCon ID="19" X="1290" Y="440" Name="BypActive"/>
+<AddOnInstruction Name="P_D4SD" ID="20" X="1000" Y="200" Operand="D4SD100" VisiblePins="Inp_FdbkA Inp_FdbkB Inp_FdbkC Inp_FdbkD Inp_PermOK0 Inp_NBPermOK0 Inp_PermOK1 Inp_NBPermOK1 Inp_PermOK2 Inp_NBPermOK2 Inp_PermOK3 Inp_NBPermOK3 Inp_IntlkOK Inp_NBIntlkOK Inp_IOFault Out_A Out_B Out_C Out_D Sts_St0 Sts_St1 Sts_St2 Sts_St3 Sts_Moving Sts_BypActive Sts_Err Sts_Hand Sts_OoS Sts_Maint Sts_Ovrd Sts_Prog Sts_ProgLocked Sts_Oper Sts_OperLocked"/>
+<Wire FromID="0" ToID="20" ToParam="Inp_FdbkA"/>
+<Wire FromID="1" ToID="20" ToParam="Inp_FdbkB"/>
+<Wire FromID="2" ToID="20" ToParam="Inp_FdbkC"/>
+<Wire FromID="3" ToID="20" ToParam="Inp_FdbkD"/>
+<Wire FromID="8" ToID="20" ToParam="Inp_IOFault"/>
+<Wire FromID="9" ToID="20" ToParam="Inp_IntlkOK"/>
+<Wire FromID="10" ToID="20" ToParam="Inp_NBIntlkOK"/>
+<Wire FromID="11" ToID="20" ToParam="Inp_NBPermOK0"/>
+<Wire FromID="12" ToID="20" ToParam="Inp_NBPermOK1"/>
+<Wire FromID="13" ToID="20" ToParam="Inp_NBPermOK2"/>
+<Wire FromID="14" ToID="20" ToParam="Inp_NBPermOK3"/>
+<Wire FromID="15" ToID="20" ToParam="Inp_PermOK0"/>
+<Wire FromID="16" ToID="20" ToParam="Inp_PermOK1"/>
+<Wire FromID="17" ToID="20" ToParam="Inp_PermOK2"/>
+<Wire FromID="18" ToID="20" ToParam="Inp_PermOK3"/>
+<Wire FromID="20" FromParam="Out_A" ToID="4"/>
+<Wire FromID="20" FromParam="Out_B" ToID="5"/>
+<Wire FromID="20" FromParam="Out_C" ToID="6"/>
+<Wire FromID="20" FromParam="Out_D" ToID="7"/>
+<Wire FromID="20" FromParam="Sts_BypActive" ToID="19"/>
+<TextBox ID="21" X="1400" Y="1000" Width="0">
+<Text>
+<![CDATA[(RA-
+
+LIB)PS_D4SD_4_10_01_ROUTINE]]>
+</Text>
+</TextBox>
+</Sheet>
+<Sheet Number="2">
+<Description>
+<![CDATA[Permissives 0]]>
+</Description>
+<ICon ID="22" X="1100" Y="580" Name="BypActive"/>
+<OCon ID="23" X="1490" Y="280" Name="NBPermOK0"/>
+<OCon ID="24" X="1590" Y="260" Name="PermOK0"/>
+<AddOnInstruction Name="P_Perm" ID="25" X="1200" Y="200" Operand="D4SD100_Perm0" VisiblePins="Inp_Perm00 Inp_Perm01 Inp_Perm02 Inp_Perm03 Inp_Perm04 Inp_Perm05 Inp_Perm06 Inp_Perm07 Inp_Perm08 Inp_Perm09 Inp_Perm10 Inp_Perm11 Inp_Perm12 Inp_Perm13 Inp_Perm14 Inp_Perm15 Inp_BypActive Sts_PermOK Sts_NBPermOK"/>
+<Wire FromID="25" FromParam="Sts_NBPermOK" ToID="23"/>
+<Wire FromID="25" FromParam="Sts_PermOK" ToID="24"/>
+<FeedbackWire FromID="22" ToID="25" ToParam="Inp_BypActive"/>
+</Sheet>
+<Sheet Number="3">
+<Description>
+<![CDATA[Permissives 1]]>
+</Description>
+<ICon ID="26" X="1100" Y="580" Name="BypActive"/>
+<OCon ID="27" X="1490" Y="280" Name="NBPermOK1"/>
+<OCon ID="28" X="1590" Y="260" Name="PermOK1"/>
+<AddOnInstruction Name="P_Perm" ID="29" X="1200" Y="200" Operand="D4SD100_Perm1" VisiblePins="Inp_Perm00 Inp_Perm01 Inp_Perm02 Inp_Perm03 Inp_Perm04 Inp_Perm05 Inp_Perm06 Inp_Perm07 Inp_Perm08 Inp_Perm09 Inp_Perm10 Inp_Perm11 Inp_Perm12 Inp_Perm13 Inp_Perm14 Inp_Perm15 Inp_BypActive Sts_PermOK Sts_NBPermOK"/>
+<Wire FromID="29" FromParam="Sts_NBPermOK" ToID="27"/>
+<Wire FromID="29" FromParam="Sts_PermOK" ToID="28"/>
+<FeedbackWire FromID="26" ToID="29" ToParam="Inp_BypActive"/>
+</Sheet>
+<Sheet Number="4">
+<Description>
+<![CDATA[Permissives 2]]>
+</Description>
+<ICon ID="30" X="1100" Y="580" Name="BypActive"/>
+<OCon ID="31" X="1490" Y="280" Name="NBPermOK2"/>
+<OCon ID="32" X="1590" Y="260" Name="PermOK2"/>
+<AddOnInstruction Name="P_Perm" ID="33" X="1200" Y="200" Operand="D4SD100_Perm2" VisiblePins="Inp_Perm00 Inp_Perm01 Inp_Perm02 Inp_Perm03 Inp_Perm04 Inp_Perm05 Inp_Perm06 Inp_Perm07 Inp_Perm08 Inp_Perm09 Inp_Perm10 Inp_Perm11 Inp_Perm12 Inp_Perm13 Inp_Perm14 Inp_Perm15 Inp_BypActive Sts_PermOK Sts_NBPermOK"/>
+<Wire FromID="33" FromParam="Sts_NBPermOK" ToID="31"/>
+<Wire FromID="33" FromParam="Sts_PermOK" ToID="32"/>
+<FeedbackWire FromID="30" ToID="33" ToParam="Inp_BypActive"/>
+</Sheet>
+<Sheet Number="5">
+<Description>
+<![CDATA[Permissives 3]]>
+</Description>
+<ICon ID="34" X="1100" Y="580" Name="BypActive"/>
+<OCon ID="35" X="1490" Y="280" Name="NBPermOK3"/>
+<OCon ID="36" X="1570" Y="260" Name="PermOK3"/>
+<AddOnInstruction Name="P_Perm" ID="37" X="1200" Y="200" Operand="D4SD100_Perm3" VisiblePins="Inp_Perm00 Inp_Perm01 Inp_Perm02 Inp_Perm03 Inp_Perm04 Inp_Perm05 Inp_Perm06 Inp_Perm07 Inp_Perm08 Inp_Perm09 Inp_Perm10 Inp_Perm11 Inp_Perm12 Inp_Perm13 Inp_Perm14 Inp_Perm15 Inp_BypActive Sts_PermOK Sts_NBPermOK"/>
+<Wire FromID="37" FromParam="Sts_NBPermOK" ToID="35"/>
+<Wire FromID="37" FromParam="Sts_PermOK" ToID="36"/>
+<FeedbackWire FromID="34" ToID="37" ToParam="Inp_BypActive"/>
+</Sheet>
+<Sheet Number="6">
+<Description>
+<![CDATA[Interlocks]]>
+</Description>
+<ICon ID="38" X="1100" Y="580" Name="BypActive"/>
+<OCon ID="39" X="1580" Y="260" Name="IntlkOK"/>
+<OCon ID="40" X="1490" Y="280" Name="NBIntlkOK"/>
+<AddOnInstruction Name="P_Intlk" ID="41" X="1200" Y="200" Operand="D4SD100_Intlk" VisiblePins="Inp_Intlk00 Inp_Intlk01 Inp_Intlk02 Inp_Intlk03 Inp_Intlk04 Inp_Intlk05 Inp_Intlk06 Inp_Intlk07 Inp_Intlk08 Inp_Intlk09 Inp_Intlk10 Inp_Intlk11 Inp_Intlk12 Inp_Intlk13 Inp_Intlk14 Inp_Intlk15 Inp_BypActive Inp_LatchDefeat Inp_Reset Sts_IntlkOK Sts_NBIntlkOK"/>
+<Wire FromID="41" FromParam="Sts_IntlkOK" ToID="39"/>
+<Wire FromID="41" FromParam="Sts_NBIntlkOK" ToID="40"/>
+<FeedbackWire FromID="38" ToID="41" ToParam="Inp_BypActive"/>
+</Sheet>
+<Sheet Number="7">
+<Description>
+<![CDATA[IO Fault]]>
+</Description>
+<IRef ID="42" X="600" Y="260" Operand="D4SD100_Inp_FdbkA_ChanFault" HideDesc="false"/>
+<IRef ID="43" X="600" Y="700" Operand="D4SD100_Inp_FdbkA_ModFault" HideDesc="false"/>
+<IRef ID="44" X="400" Y="280" Operand="D4SD100_Inp_FdbkB_ChanFault" HideDesc="false"/>
+<IRef ID="45" X="400" Y="740" Operand="D4SD100_Inp_FdbkB_ModFault" HideDesc="false"/>
+<IRef ID="46" X="600" Y="360" Operand="D4SD100_Inp_FdbkC_ChanFault" HideDesc="false"/>
+<IRef ID="47" X="600" Y="800" Operand="D4SD100_Inp_FdbkC_ModFault" HideDesc="false"/>
+<IRef ID="48" X="400" Y="400" Operand="D4SD100_Inp_FdbkD_ChanFault" HideDesc="false"/>
+<IRef ID="49" X="400" Y="820" Operand="D4SD100_Inp_FdbkD_ModFault" HideDesc="false"/>
+<IRef ID="50" X="600" Y="480" Operand="D4SD100_Out_A_ChanFault" HideDesc="false"/>
+<IRef ID="51" X="600" Y="900" Operand="D4SD100_Out_A_ModFault" HideDesc="false"/>
+<IRef ID="52" X="400" Y="520" Operand="D4SD100_Out_B_ChanFault" HideDesc="false"/>
+<IRef ID="53" X="400" Y="940" Operand="D4SD100_Out_B_ModFault" HideDesc="false"/>
+<IRef ID="54" X="600" Y="600" Operand="D4SD100_Out_C_ChanFault" HideDesc="false"/>
+<IRef ID="55" X="600" Y="1000" Operand="D4SD100_Out_C_ModFault" HideDesc="false"/>
+<IRef ID="56" X="400" Y="640" Operand="D4SD100_Out_D_ChanFault" HideDesc="false"/>
+<IRef ID="57" X="400" Y="1040" Operand="D4SD100_Out_D_ModFault" HideDesc="false"/>
+<OCon ID="58" X="1200" Y="260" Name="IOFault"/>
+<Block Type="BOR" ID="59" X="800" Y="200" Operand="D4SD100_ChanFault_Bor" VisiblePins="In1 In2 In3 In4 In5 In6 In7 In8 Out" HideDesc="false"/>
+<Block Type="BOR" ID="60" X="1000" Y="200" Operand="D4SD100_IOFault_Bor" VisiblePins="In1 In2 Out" HideDesc="false"/>
+<Block Type="BOR" ID="61" X="800" Y="600" Operand="D4SD100_ModFault_Bor" VisiblePins="In1 In2 In3 In4 In5 In6 In7 In8 Out" HideDesc="false"/>
+<Wire FromID="42" ToID="59" ToParam="In1"/>
+<Wire FromID="43" ToID="61" ToParam="In1"/>
+<Wire FromID="44" ToID="59" ToParam="In2"/>
+<Wire FromID="45" ToID="61" ToParam="In2"/>
+<Wire FromID="46" ToID="59" ToParam="In3"/>
+<Wire FromID="47" ToID="61" ToParam="In3"/>
+<Wire FromID="48" ToID="59" ToParam="In4"/>
+<Wire FromID="49" ToID="61" ToParam="In4"/>
+<Wire FromID="50" ToID="59" ToParam="In5"/>
+<Wire FromID="51" ToID="61" ToParam="In5"/>
+<Wire FromID="52" ToID="59" ToParam="In6"/>
+<Wire FromID="53" ToID="61" ToParam="In6"/>
+<Wire FromID="54" ToID="59" ToParam="In7"/>
+<Wire FromID="55" ToID="61" ToParam="In7"/>
+<Wire FromID="56" ToID="59" ToParam="In8"/>
+<Wire FromID="57" ToID="61" ToParam="In8"/>
+<Wire FromID="59" FromParam="Out" ToID="60" ToParam="In1"/>
+<Wire FromID="60" FromParam="Out" ToID="58"/>
+<Wire FromID="61" FromParam="Out" ToID="60" ToParam="In2"/>
+</Sheet>
+</FBDContent>
+</Routine>

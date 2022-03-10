@@ -1,0 +1,225 @@
+<Tag Name="MT300_ChanFault_Bor" TagType="Base" DataType="FBD_BOOLEAN_OR" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[1,1,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_BOOLEAN_OR">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="MT300_Inp_Running" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Runing Feedback Input]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Inp_Running_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Runing Feedback Input Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Inp_Running_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Runing Feedback Input Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Inp_SpeedFdbk" TagType="Base" DataType="REAL" Radix="Float" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Speed Feedback Input]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Inp_SpeedFdbk_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Speed Feedback Input Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Inp_SpeedFdbk_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Speed Feedback Input Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_IOFault_Bor" TagType="Base" DataType="FBD_BOOLEAN_OR" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[1,1,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_BOOLEAN_OR">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="MT300_ModFault_Bor" TagType="Base" DataType="FBD_BOOLEAN_OR" Constant="false" ExternalAccess="Read Only">
+<Data Format="L5K">
+<![CDATA[[1,1,5.60519386e-045]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_BOOLEAN_OR">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In5" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In6" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In7" DataType="BOOL" Value="0"/>
+<DataValueMember Name="In8" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_RunFwd_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Run Forward Output Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_RunFwd_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Run Forward Output Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_RunRev_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Run Reverse Output Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_RunRev_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Run Reverse Output Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_SpeedRef" TagType="Base" DataType="REAL" Radix="Float" Usage="Output" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Speed Reference Output]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0.00000000e+000]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_SpeedRef_ChanFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Speed Reference Output Channel Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_SpeedRef_ModFault" TagType="Base" DataType="BOOL" Radix="Decimal" Usage="Input" Constant="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[TagDescript - Speed Reference Output Module Fault]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_Start" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Tag Descript - Output to Start Drive]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="MT300_Out_Stop" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Tag Descript - Output to Stop Drive]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>

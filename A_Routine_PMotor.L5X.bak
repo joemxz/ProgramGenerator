@@ -1,0 +1,98 @@
+<Routine Name="MT100" Type="FBD">
+<Description>
+<![CDATA[TagDescript]]>
+</Description>
+<FBDContent SheetSize="B - 11 x 17 in" SheetOrientation="Landscape">
+<Sheet Number="1">
+<Description>
+<![CDATA[PS_Motor]]>
+</Description>
+<IRef ID="0" X="700" Y="220" Operand="MT100_Inp_RunFdbk" HideDesc="false"/>
+<IRef ID="1" X="480" Y="580" Operand="MT100_Inp_XCmdAcq" HideDesc="false"/>
+<IRef ID="2" X="480" Y="460" Operand="MT100_Inp_XCmdJog" HideDesc="false"/>
+<ORef ID="3" X="1050" Y="260" Operand="MT100_Out_Run" HideDesc="false"/>
+<ICon ID="4" X="680" Y="400" Name="IOFault"/>
+<ICon ID="5" X="680" Y="340" Name="IntlkOK"/>
+<ICon ID="6" X="580" Y="380" Name="NBIntlkOK"/>
+<ICon ID="7" X="580" Y="320" Name="NBPermOK"/>
+<ICon ID="8" X="680" Y="280" Name="PermOK"/>
+<OCon ID="9" X="1050" Y="400" Name="BypActive"/>
+<OCon ID="10" X="1410" Y="600" Name="Ready"/>
+<OCon ID="11" X="1050" Y="320" Name="Stoppped"/>
+<Block Type="BNOT" ID="12" X="580" Y="520" Operand="MT100_Xacq_Bnot" VisiblePins="In Out" HideDesc="false"/>
+<AddOnInstruction Name="P_Motor" ID="13" X="800" Y="200" Operand="MT100" VisiblePins="Inp_RunFdbk Inp_PermOK Inp_NBPermOK Inp_IntlkOK Inp_NBIntlkOK Inp_IOFault XCmd_Jog XCmd_Acq XCmd_Rel Out_Run Out_Horn Sts_Stopped Sts_Starting Sts_Running Sts_Stopping Sts_Jogging Sts_BypActive Sts_Err Sts_Hand Sts_OoS Sts_Maint Sts_Ovrd Sts_Ext Sts_Prog Sts_Oper"/>
+<AddOnInstruction Name="P_ResInh" ID="14" X="1200" Y="500" Operand="MT100_ResInh" VisiblePins="Inp_Stopped Inp_Starting Inp_Running Val_MinToReady Val_SecToReady Sts_Ready Sts_Err"/>
+<AddOnInstruction Name="P_RunTime" ID="15" X="1200" Y="280" Operand="MT100_RunTime" VisiblePins="Inp_Starting Inp_Running Val_Starts Val_CurRunHrs Val_MaxRunHrs Val_TotRunHrs"/>
+<Wire FromID="0" ToID="13" ToParam="Inp_RunFdbk"/>
+<Wire FromID="1" ToID="12" ToParam="In"/>
+<Wire FromID="1" ToID="13" ToParam="XCmd_Acq"/>
+<Wire FromID="2" ToID="13" ToParam="XCmd_Jog"/>
+<Wire FromID="4" ToID="13" ToParam="Inp_IOFault"/>
+<Wire FromID="5" ToID="13" ToParam="Inp_IntlkOK"/>
+<Wire FromID="6" ToID="13" ToParam="Inp_NBIntlkOK"/>
+<Wire FromID="7" ToID="13" ToParam="Inp_NBPermOK"/>
+<Wire FromID="8" ToID="13" ToParam="Inp_PermOK"/>
+<Wire FromID="12" FromParam="Out" ToID="13" ToParam="XCmd_Rel"/>
+<Wire FromID="13" FromParam="Out_Run" ToID="3"/>
+<Wire FromID="13" FromParam="Sts_BypActive" ToID="9"/>
+<Wire FromID="13" FromParam="Sts_Stopped" ToID="11"/>
+<Wire FromID="13" FromParam="Sts_Running" ToID="14" ToParam="Inp_Running"/>
+<Wire FromID="13" FromParam="Sts_Starting" ToID="14" ToParam="Inp_Starting"/>
+<Wire FromID="13" FromParam="Sts_Stopped" ToID="14" ToParam="Inp_Stopped"/>
+<Wire FromID="13" FromParam="Sts_Running" ToID="15" ToParam="Inp_Running"/>
+<Wire FromID="13" FromParam="Sts_Starting" ToID="15" ToParam="Inp_Starting"/>
+<Wire FromID="14" FromParam="Sts_Ready" ToID="10"/>
+<TextBox ID="16" X="1400" Y="1000" Width="0">
+<Text>
+<![CDATA[(RA-
+
+LIB)PS_Motor_4_10_01_ROUTINE]]>
+</Text>
+</TextBox>
+</Sheet>
+<Sheet Number="2">
+<Description>
+<![CDATA[Permissives]]>
+</Description>
+<ICon ID="17" X="1100" Y="580" Name="BypActive"/>
+<ICon ID="18" X="1100" Y="260" Name="Ready"/>
+<OCon ID="19" X="1500" Y="280" Name="NBPermOK"/>
+<OCon ID="20" X="1590" Y="260" Name="PermOK"/>
+<AddOnInstruction Name="P_Perm" ID="21" X="1200" Y="200" Operand="MT100_Perm" VisiblePins="Inp_Perm00 Inp_Perm01 Inp_Perm02 Inp_Perm03 Inp_Perm04 Inp_Perm05 Inp_Perm06 Inp_Perm07 Inp_Perm08 Inp_Perm09 Inp_Perm10 Inp_Perm11 Inp_Perm12 Inp_Perm13 Inp_Perm14 Inp_Perm15 Inp_BypActive Sts_PermOK Sts_NBPermOK"/>
+<Wire FromID="21" FromParam="Sts_NBPermOK" ToID="19"/>
+<Wire FromID="21" FromParam="Sts_PermOK" ToID="20"/>
+<FeedbackWire FromID="17" ToID="21" ToParam="Inp_BypActive"/>
+<FeedbackWire FromID="18" ToID="21" ToParam="Inp_Perm00"/>
+</Sheet>
+<Sheet Number="3">
+<Description>
+<![CDATA[Interlocks]]>
+</Description>
+<ICon ID="22" X="1000" Y="580" Name="BypActive"/>
+<ICon ID="23" X="1080" Y="600" Name="Stoppped"/>
+<OCon ID="24" X="1580" Y="260" Name="IntlkOK"/>
+<OCon ID="25" X="1490" Y="280" Name="NBIntlkOK"/>
+<AddOnInstruction Name="P_Intlk" ID="26" X="1200" Y="200" Operand="MT100_Intlk" VisiblePins="Inp_Intlk00 Inp_Intlk01 Inp_Intlk02 Inp_Intlk03 Inp_Intlk04 Inp_Intlk05 Inp_Intlk06 Inp_Intlk07 Inp_Intlk08 Inp_Intlk09 Inp_Intlk10 Inp_Intlk11 Inp_Intlk12 Inp_Intlk13 Inp_Intlk14 Inp_Intlk15 Inp_BypActive Inp_LatchDefeat Inp_Reset Sts_IntlkOK Sts_NBIntlkOK"/>
+<Wire FromID="26" FromParam="Sts_IntlkOK" ToID="24"/>
+<Wire FromID="26" FromParam="Sts_NBIntlkOK" ToID="25"/>
+<FeedbackWire FromID="22" ToID="26" ToParam="Inp_BypActive"/>
+<FeedbackWire FromID="23" ToID="26" ToParam="Inp_LatchDefeat"/>
+</Sheet>
+<Sheet Number="4">
+<Description>
+<![CDATA[IO Fault]]>
+</Description>
+<IRef ID="27" X="400" Y="360" Operand="MT100_Inp_RunFdbk_ChanFault" HideDesc="false"/>
+<IRef ID="28" X="400" Y="260" Operand="MT100_Inp_RunFdbk_ModFault" HideDesc="false"/>
+<IRef ID="29" X="400" Y="560" Operand="MT100_Out_Run_ChanFault" HideDesc="false"/>
+<IRef ID="30" X="400" Y="460" Operand="MT100_Out_Run_ModFault" HideDesc="false"/>
+<OCon ID="31" X="800" Y="260" Name="IOFault"/>
+<Block Type="BOR" ID="32" X="600" Y="200" Operand="MT100_IOFault_Bor" VisiblePins="In1 In2 In3 In4 Out" HideDesc="false"/>
+<Wire FromID="27" ToID="32" ToParam="In2"/>
+<Wire FromID="28" ToID="32" ToParam="In1"/>
+<Wire FromID="29" ToID="32" ToParam="In4"/>
+<Wire FromID="30" ToID="32" ToParam="In3"/>
+<Wire FromID="32" FromParam="Out" ToID="31"/>
+</Sheet>
+</FBDContent>
+</Routine>

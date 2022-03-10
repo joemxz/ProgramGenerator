@@ -1,0 +1,54 @@
+<Routine Name="XC100" Type="FBD">
+<Description>
+<![CDATA[TagDescript]]>
+</Description>
+<FBDContent SheetSize="B - 11 x 17 in" SheetOrientation="Landscape">
+<Sheet Number="1">
+<Description>
+<![CDATA[PS_AOut]]>
+</Description>
+<IRef ID="0" X="600" Y="260" Operand="XC100_Inp_Tieback" HideDesc="false"/>
+<IRef ID="1" X="360" Y="560" Operand="XC100_Inp_Tieback_ChanFault" HideDesc="false"/>
+<IRef ID="2" X="360" Y="460" Operand="XC100_Inp_Tieback_ModFault" HideDesc="false"/>
+<IRef ID="3" X="360" Y="760" Operand="XC100_Out_CV_ChanFault" HideDesc="false"/>
+<IRef ID="4" X="360" Y="660" Operand="XC100_Out_CV_ModFault" HideDesc="false"/>
+<IRef ID="5" X="720" Y="600" Operand="XC100_PSet_CV" HideDesc="false"/>
+<ORef ID="6" X="1100" Y="260" Operand="XC100_Out_CV" HideDesc="false"/>
+<ICon ID="7" X="740" Y="280" Name="IntlkOK"/>
+<ICon ID="8" X="600" Y="300" Name="NBIntlkOK"/>
+<OCon ID="9" X="1090" Y="380" Name="BypActive"/>
+<Block Type="BOR" ID="10" X="500" Y="400" Operand="XC100_IOFault_Bor" VisiblePins="In1 In2 In3 In4 Out" HideDesc="false"/>
+<AddOnInstruction Name="P_AOut" ID="11" X="800" Y="200" Operand="XC100" VisiblePins="Inp_Tieback Inp_IntlkOK Inp_NBIntlkOK Inp_IOFault Inp_Hand Inp_Ovrd Inp_OvrdCV Cfg_CVRoCLimInc Cfg_CVRoCLimDec PSet_CV Out_CV Val_CVSet Val_CVOut SrcQ Sts_BypActive Sts_Err Sts_Hand Sts_Maint Sts_Ovrd Sts_Prog Sts_Oper"/>
+<Wire FromID="0" ToID="11" ToParam="Inp_Tieback"/>
+<Wire FromID="1" ToID="10" ToParam="In2"/>
+<Wire FromID="2" ToID="10" ToParam="In1"/>
+<Wire FromID="3" ToID="10" ToParam="In4"/>
+<Wire FromID="4" ToID="10" ToParam="In3"/>
+<Wire FromID="5" ToID="11" ToParam="PSet_CV"/>
+<Wire FromID="7" ToID="11" ToParam="Inp_IntlkOK"/>
+<Wire FromID="8" ToID="11" ToParam="Inp_NBIntlkOK"/>
+<Wire FromID="10" FromParam="Out" ToID="11" ToParam="Inp_IOFault"/>
+<Wire FromID="11" FromParam="Out_CV" ToID="6"/>
+<Wire FromID="11" FromParam="Sts_BypActive" ToID="9"/>
+<TextBox ID="12" X="1400" Y="1000" Width="0">
+<Text>
+<![CDATA[(RA-
+
+LIB)PS_AOut_4_10_01_ROUTINE]]>
+</Text>
+</TextBox>
+</Sheet>
+<Sheet Number="2">
+<Description>
+<![CDATA[Interlocks]]>
+</Description>
+<ICon ID="13" X="1100" Y="580" Name="BypActive"/>
+<OCon ID="14" X="1600" Y="260" Name="IntlkOK"/>
+<OCon ID="15" X="1490" Y="280" Name="NBIntlkOK"/>
+<AddOnInstruction Name="P_Intlk" ID="16" X="1200" Y="200" Operand="XC100_Intlk" VisiblePins="Inp_Intlk00 Inp_Intlk01 Inp_Intlk02 Inp_Intlk03 Inp_Intlk04 Inp_Intlk05 Inp_Intlk06 Inp_Intlk07 Inp_Intlk08 Inp_Intlk09 Inp_Intlk10 Inp_Intlk11 Inp_Intlk12 Inp_Intlk13 Inp_Intlk14 Inp_Intlk15 Inp_BypActive Inp_LatchDefeat Inp_Reset Sts_IntlkOK Sts_NBIntlkOK"/>
+<Wire FromID="16" FromParam="Sts_IntlkOK" ToID="14"/>
+<Wire FromID="16" FromParam="Sts_NBIntlkOK" ToID="15"/>
+<FeedbackWire FromID="13" ToID="16" ToParam="Inp_BypActive"/>
+</Sheet>
+</FBDContent>
+</Routine>
